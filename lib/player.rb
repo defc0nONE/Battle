@@ -7,10 +7,6 @@ class Player
     @super_powers = DEFAULT_SUPER_POWERS
   end
 
-  def impart(name)
-    name.receive_superpowers
-  end
-
   def receive_superpowers
     @super_powers += 10
   end

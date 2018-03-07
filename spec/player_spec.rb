@@ -12,20 +12,13 @@ describe Player do
 
   describe '#super_powers' do
     it 'returns the super power points' do
-      expect(fred.super_powers).to eq described_class::DEFAULT_SUPER_POWERS
-    end
-  end
-
-  describe '#impart' do
-    it 'imparts super powers to the player' do
-      expect(fred).to receive(:receive_superpowers)
-      frank.impart(fred)
+      expect(frank.super_powers).to eq described_class::DEFAULT_SUPER_POWERS
     end
   end
 
   describe '#receive_superpowers' do
     it 'increases super powers by 10' do
-      expect { fred.receive_superpowers }.to change { fred.super_powers }.by(10)
+      expect { frank.receive_superpowers }.to change { frank.super_powers }.by(10)
     end
   end
 end
