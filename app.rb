@@ -19,5 +19,11 @@ class Battle < Sinatra::Base
     erb(:play)
   end
 
+  get '/impart' do
+    @player1 = session['player_1_name']
+    @player2 = session['player_2_name']
+    erb(:impart)
+  end
+
   run! if app_file == $0
 end
