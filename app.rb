@@ -1,5 +1,5 @@
 require 'sinatra'
-require_relative './lib/player'
+require './lib/player.rb'
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -21,8 +21,9 @@ class Battle < Sinatra::Base
   end
 
   get '/impart' do
-    @player1 = $player1.name
-    @player2 = $player2.name
+    @player1 = $player1
+    @player2 = $player2
+    @player1.impart(@player2)
     erb(:impart)
   end
 
