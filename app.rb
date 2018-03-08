@@ -24,6 +24,7 @@ class Battle < Sinatra::Base
   get '/impart' do
     @game = $game
     @game.impart(@game.player2)
+    @game.switch_turns
     erb(:impart)
   end
 
