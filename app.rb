@@ -25,9 +25,9 @@ class Battle < Sinatra::Base
   post '/impart' do
     Impart.run($game.opponent_of($game.current_turn))
     if $game.game_over?
-      redirect(:game_over)
+      redirect '/game-over'
     else
-      redirect(:impart)
+      redirect '/impart'
     end
   end
 
