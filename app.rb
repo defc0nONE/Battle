@@ -1,6 +1,7 @@
 require 'sinatra'
 require './lib/game'
 require './lib/player'
+require './lib/impart'
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -23,7 +24,7 @@ class Battle < Sinatra::Base
 
   get '/impart' do
     @game = $game
-    @game.impart(@game.player2)
+    Impart.run(@game.opponent_of(@game.current_turn))
     @game.switch_turns
     erb(:impart)
   end

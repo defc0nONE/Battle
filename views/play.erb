@@ -1,8 +1,9 @@
 <%= @game.current_turn.name %>'s turn
-
+<p>
 Player 1: <%= @game.player1.name %> vs Player 2: <%= @game.player2.name %>
-
-<%= @game.player1.name %>: 100SP
-<%= @game.player2.name %>: 0SP
-
+<p>
+<%= @game.player1.name %>: <%= @game.player1.super_powers %>SP
+<p>
+<%= @game.player2.name %>: <%= @game.player2.super_powers %>SP
+<p>
 <a href="/impart">Impart!</a>

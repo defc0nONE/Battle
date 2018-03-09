@@ -5,13 +5,6 @@ describe Game do
   let(:player1) { double :player }
   let(:player2) { double :player }
 
-  describe '#impart' do
-    it 'imparts super powers to the player' do
-      expect(player2).to receive(:receive_superpowers)
-      game.impart(player2)
-    end
-  end
-
   describe '#current_turn' do
     it 'starts as player 1' do
       expect(game.current_turn).to eq player1
