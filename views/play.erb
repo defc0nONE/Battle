@@ -6,4 +6,6 @@ Player 1: <%= @game.player1.name %> vs Player 2: <%= @game.player2.name %>
 <p>
 <%= @game.player2.name %>: <%= @game.player2.super_powers %>SP
 <p>
-<a href="/impart">Impart!</a>
+<form action="/impart" method="post">
+  <input type="submit" value="Impart!">
+</form>
